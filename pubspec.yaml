@@ -1,0 +1,51 @@
+name: chandraprakash_s_application1
+description: A new Flutter project.
+version: 1.0.0+1
+environment: 
+  sdk: '>=2.12.0 <3.0.0'
+dependencies: 
+  flutter: 
+    sdk: flutter
+  get: ^4.6.5
+  connectivity_plus: ^2.3.6
+  shared_preferences: ^2.0.15
+  cached_network_image: ^3.2.1
+  flutter_svg: ^1.1.6
+  flutter_svg_provider: ^1.0.3
+  intl: ^0.17.0
+  url_launcher: 6.0.20
+dev_dependencies: 
+  flutter_test: 
+    sdk: flutter
+flutter: 
+  uses-material-design: true
+  assets: 
+    - assets/
+    - assets/images/
+  fonts: 
+    - family: Inter
+      fonts: 
+        - asset: assets/fonts/InterMedium.ttf
+          weight: 500
+        - asset: assets/fonts/InterRegular.ttf
+          weight: 400
+        - asset: assets/fonts/InterRegular.ttf
+          weight: 400
+    - family: Josefin Sans
+      fonts: 
+        - asset: assets/fonts/JosefinSansRegular.ttf
+          weight: 400
+    - family: Poppins
+      fonts: 
+        - asset: assets/fonts/PoppinsRegular.ttf
+          weight: 400
+    - family: Roboto
+      fonts: 
+        - asset: assets/fonts/RobotoMedium.ttf
+          weight: 500
+        - asset: assets/fonts/RobotoRegular.ttf
+          weight: 400
+    - family: Lato
+      fonts: 
+        - asset: assets/fonts/LatoBold.ttf
+          weight: 700
