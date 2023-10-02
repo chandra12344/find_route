@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:chandraprakash_s_application1/core/app_export.dart';
 
+import 'app_decoration.dart';
+import 'app_decoration.dart';
+
 class AppDecoration {
   static BoxDecoration get fillGray50 => BoxDecoration(
         color: ColorConstant.gray50,
@@ -48,7 +51,7 @@ class AppDecoration {
           width: getHorizontalSize(
             3,
           ),
-          strokeAlign: strokeAlignOutside,
+          // strokeAlign: strokeAlignOutside,
         ),
         boxShadow: [
           BoxShadow(
@@ -223,11 +226,11 @@ class BorderRadiusStyle {
 
 // For Flutter SDK Version 3.7.2 or greater.
 
-double get strokeAlignInside => BorderSide.strokeAlignInside;
-
-double get strokeAlignCenter => BorderSide.strokeAlignCenter;
-
-double get strokeAlignOutside => BorderSide.strokeAlignOutside;
+// double get strokeAlignInside => BorderSide.strokeAlignInside;
+//
+// double get strokeAlignCenter => BorderSide.strokeAlignCenter;
+//
+// double get strokeAlignOutside => BorderSide.strokeAlignOutside;
 
 // For Flutter SDK Version 3.7.1 or less.
 
