@@ -5,7 +5,7 @@ import 'package:chandraprakash_s_application1/widgets/app_bar/appbar_subtitle.da
 import 'package:chandraprakash_s_application1/widgets/app_bar/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
-class StoreLocatorScreen extends GetWidget<StoreLocatorController> {
+class RouteLocatorScreen extends GetWidget<RouteLocatorController> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -79,17 +79,6 @@ class StoreLocatorScreen extends GetWidget<StoreLocatorController> {
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
-                                                    CustomImageView(
-                                                        imagePath: ImageConstant
-                                                            .imgEllipse19540x40,
-                                                        height: getSize(40),
-                                                        width: getSize(40),
-                                                        radius: BorderRadius
-                                                            .circular(
-                                                                getHorizontalSize(
-                                                                    20)),
-                                                        margin: getMargin(
-                                                            bottom: 17)),
                                                     Padding(
                                                         padding:
                                                             getPadding(top: 3),
@@ -102,8 +91,7 @@ class StoreLocatorScreen extends GetWidget<StoreLocatorController> {
                                                                     .start,
                                                             children: [
                                                               Text(
-                                                                  "lbl_store_1"
-                                                                      .tr,
+                                                                  "Route Name",
                                                                   overflow:
                                                                       TextOverflow
                                                                           .ellipsis,
@@ -118,7 +106,7 @@ class StoreLocatorScreen extends GetWidget<StoreLocatorController> {
                                                                           top:
                                                                               14),
                                                                   child: Text(
-                                                                      "msg_3339_ventura_drive"
+                                                                      "Distance:51km"
                                                                           .tr,
                                                                       overflow:
                                                                           TextOverflow
@@ -132,31 +120,19 @@ class StoreLocatorScreen extends GetWidget<StoreLocatorController> {
                                                   ]),
                                               Padding(
                                                   padding: getPadding(
-                                                      left: 51,
-                                                      top: 10,
+                                                      left: 8,
+                                                      top: 1,
                                                       bottom: 1),
-                                                  child: Row(children: [
-                                                    CustomImageView(
-                                                        svgPath: ImageConstant
-                                                            .imgCall,
-                                                        height: getSize(20),
-                                                        width: getSize(20)),
-                                                    Padding(
-                                                        padding: getPadding(
-                                                            left: 8,
-                                                            top: 1,
-                                                            bottom: 1),
-                                                        child: Text(
-                                                            "lbl_415_926_3641"
-                                                                .tr,
-                                                            overflow:
-                                                                TextOverflow
-                                                                    .ellipsis,
-                                                            textAlign:
-                                                                TextAlign.left,
-                                                            style: AppStyle
-                                                                .txtGilroyMedium14Bluegray400))
-                                                  ]))
+                                                  child: Text(
+                                                      "Pollution level : 76%"
+                                                          .tr,
+                                                      overflow:
+                                                          TextOverflow
+                                                              .ellipsis,
+                                                      textAlign:
+                                                          TextAlign.left,
+                                                      style: AppStyle
+                                                          .txtGilroyMedium14Bluegray400))
                                             ])))
                               ])))
                 ]))));

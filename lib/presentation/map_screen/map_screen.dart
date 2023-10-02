@@ -1,4 +1,4 @@
-import '../store_locator_screen/store_locator_screen.dart';
+import '../store_locator_screen/route_locator_screen.dart';
 import 'controller/map_controller.dart';
 import 'package:chandraprakash_s_application1/core/app_export.dart';
 import 'package:chandraprakash_s_application1/widgets/app_bar/appbar_image.dart';
@@ -163,7 +163,7 @@ class MapScreen extends GetWidget<MapController> {
                                                                               .GilroyMedium16Bluegray300,
                                                                           textInputAction:
                                                                               TextInputAction.done),
-                                                                      Align(child: ElevatedButton(onPressed: () { Get.to(StoreLocatorScreen()); }, child: Text("Find route"),),)
+                                                                      Align(child: ElevatedButton(onPressed: () { Get.to(RouteLocatorScreen()); }, child: Text("Find route"),),)
                                                                     ])))
                                                       ])),
                                                   CustomImageView(
