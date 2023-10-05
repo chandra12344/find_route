@@ -1,11 +1,9 @@
 class ImageConstant {
-  static String imgRectangle458706x396 =
-      'assets/images/img_rectangle458_706x396.png';
+  static String imgRectangle458706x396 = 'assets/images/img_rectangle458_706x396.png';
 
   static String imgRectangle1377 = 'assets/images/img_rectangle1377.png';
 
-  static String imgRectangle102x1021 =
-      'assets/images/img_rectangle_102x102_1.png';
+  static String imgRectangle102x1021 = 'assets/images/img_rectangle_102x102_1.png';
 
   static String imgRefresh = 'assets/images/img_refresh.svg';
 
@@ -18,25 +16,19 @@ class ImageConstant {
 
   static String imgArrowdown = 'assets/images/img_arrowdown.svg';
 
-  static String imgKindpng319611198x45 =
-      'assets/images/img_kindpng3196111_98x45.png';
+  static String imgKindpng319611198x45 = 'assets/images/img_kindpng3196111_98x45.png';
 
-  static String imgUnsplashenrurz62wui86x863 =
-      'assets/images/img_unsplashenrurz62wui_86x86_3.png';
+  static String imgUnsplashenrurz62wui86x863 = 'assets/images/img_unsplashenrurz62wui_86x86_3.png';
 
-  static String imgProfileimglarge50x503 =
-      'assets/images/img_profileimglarge_50x50_3.png';
+  static String imgProfileimglarge50x503 = 'assets/images/img_profileimglarge_50x50_3.png';
 
-  static String imgUnsplashenrurz62wui86x861 =
-      'assets/images/img_unsplashenrurz62wui_86x86_1.png';
+  static String imgUnsplashenrurz62wui86x861 = 'assets/images/img_unsplashenrurz62wui_86x86_1.png';
 
   static String imgMusic = 'assets/images/img_music.svg';
 
-  static String imgVolumemuteoutline =
-      'assets/images/img_volumemuteoutline.svg';
+  static String imgVolumemuteoutline = 'assets/images/img_volumemuteoutline.svg';
 
-  static String imgProfileimglarge50x504 =
-      'assets/images/img_profileimglarge_50x50_4.png';
+  static String imgProfileimglarge50x504 = 'assets/images/img_profileimglarge_50x50_4.png';
 
   static String imgMenu = 'assets/images/img_menu.svg';
 
@@ -54,27 +46,21 @@ class ImageConstant {
 
   static String imgUnion = 'assets/images/img_union.svg';
 
-  static String imgProfileimglarge50x506 =
-      'assets/images/img_profileimglarge_50x50_6.png';
+  static String imgProfileimglarge50x506 = 'assets/images/img_profileimglarge_50x50_6.png';
 
   static String imgArrowright = 'assets/images/img_arrowright.svg';
 
-  static String imgRectangle126x1267 =
-      'assets/images/img_rectangle_126x126_7.png';
+  static String imgRectangle126x1267 = 'assets/images/img_rectangle_126x126_7.png';
 
-  static String imgProfileimglarge50x505 =
-      'assets/images/img_profileimglarge_50x50_5.png';
+  static String imgProfileimglarge50x505 = 'assets/images/img_profileimglarge_50x50_5.png';
 
-  static String imgRectangle126x1261 =
-      'assets/images/img_rectangle_126x126_1.png';
+  static String imgRectangle126x1261 = 'assets/images/img_rectangle_126x126_1.png';
 
-  static String imgProfileimglarge50x509 =
-      'assets/images/img_profileimglarge_50x50_9.png';
+  static String imgProfileimglarge50x509 = 'assets/images/img_profileimglarge_50x50_9.png';
 
   static String imgGroup9796 = 'assets/images/img_group9796.svg';
 
-  static String imgUnsplashenrurz62wui86x864 =
-      'assets/images/img_unsplashenrurz62wui_86x86_4.png';
+  static String imgUnsplashenrurz62wui86x864 = 'assets/images/img_unsplashenrurz62wui_86x86_4.png';
 
   static String imgGlobe = 'assets/images/img_globe.svg';
 
@@ -82,31 +68,25 @@ class ImageConstant {
 
   static String imgDashboard = 'assets/images/img_dashboard.svg';
 
-  static String imgRectangle126x1263 =
-      'assets/images/img_rectangle_126x126_3.png';
+  static String imgRectangle126x1263 = 'assets/images/img_rectangle_126x126_3.png';
 
   static String imgStar17 = 'assets/images/img_star17.svg';
 
   static String imgSend = 'assets/images/img_send.svg';
 
-  static String imgSearchBlueGray900 =
-      'assets/images/img_search_blue_gray_900.svg';
+  static String imgSearchBlueGray900 = 'assets/images/img_search_blue_gray_900.svg';
 
-  static String img009fire2DeepOrange400 =
-      'assets/images/img_009fire2_deep_orange_400.svg';
+  static String img009fire2DeepOrange400 = 'assets/images/img_009fire2_deep_orange_400.svg';
 
-  static String imgProfileimglarge50x508 =
-      'assets/images/img_profileimglarge_50x50_8.png';
+  static String imgProfileimglarge50x508 = 'assets/images/img_profileimglarge_50x50_8.png';
 
   static String imgGroup9778 = 'assets/images/img_group9778.png';
 
   static String imgPngfind284x53 = 'assets/images/img_pngfind2_84x53.png';
 
-  static String imgProfileimglarge50x5010 =
-      'assets/images/img_profileimglarge_50x50_10.png';
+  static String imgProfileimglarge50x5010 = 'assets/images/img_profileimglarge_50x50_10.png';
 
-  static String imgUnsplashenrurz62wui86x865 =
-      'assets/images/img_unsplashenrurz62wui_86x86_5.png';
+  static String imgUnsplashenrurz62wui86x865 = 'assets/images/img_unsplashenrurz62wui_86x86_5.png';
 
   static String imgProfileimglarge50x501 =
       'assets/images/img_profileimglarge_50x50_1.png';

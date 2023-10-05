@@ -15,6 +15,7 @@ dependencies:
   intl: ^0.17.0
   url_launcher: 6.0.20
   google_maps_flutter: ^2.3.0
+  google_fonts: ^4.0.4
 #  google_maps_flutter: ^2.5.0
 dev_dependencies: 
   flutter_test: 

@@ -62,69 +62,14 @@ class MapScreen extends GetWidget<MapController> {
                                                 text:
                                                     "msg_view_location_on".tr)),
                                         Padding(
-                                            padding: getPadding(
-                                                left: 16,
-                                                top: 32,
-                                                right: 16,
-                                                bottom: 16),
+                                            padding: getPadding(left: 16, top: 32, right: 16, bottom: 16),
                                             child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
+                                                mainAxisAlignment: MainAxisAlignment.center,
                                                 children: [
                                                   Expanded(
                                                       child: Row(
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .center,
+                                                          mainAxisAlignment: MainAxisAlignment.center,
                                                           children: [
-                                                        Container(
-                                                            width:
-                                                                getHorizontalSize(
-                                                                    24),
-                                                            margin: getMargin(
-                                                                top: 10,
-                                                                bottom: 10),
-                                                            child: Column(
-                                                                mainAxisAlignment:
-                                                                    MainAxisAlignment
-                                                                        .start,
-                                                                children: [
-                                                                  CustomImageView(
-                                                                      svgPath:
-                                                                          ImageConstant
-                                                                              .imgEye,
-                                                                      height:
-                                                                          getSize(
-                                                                              24),
-                                                                      width: getSize(
-                                                                          24)),
-                                                                  CustomImageView(
-                                                                      svgPath:
-                                                                          ImageConstant
-                                                                              .imgGroup9796,
-                                                                      height:
-                                                                          getVerticalSize(
-                                                                              11),
-                                                                      width:
-                                                                          getHorizontalSize(
-                                                                              2),
-                                                                      margin: getMargin(
-                                                                          top:
-                                                                              8)),
-                                                                  CustomImageView(
-                                                                      svgPath:
-                                                                          ImageConstant
-                                                                              .imgLocation,
-                                                                      height:
-                                                                          getSize(
-                                                                              24),
-                                                                      width:
-                                                                          getSize(
-                                                                              24),
-                                                                      margin: getMargin(
-                                                                          top:
-                                                                              9))
-                                                                ])),
                                                         Expanded(
                                                             child: Padding(
                                                                 padding:
@@ -166,16 +111,8 @@ class MapScreen extends GetWidget<MapController> {
                                                                       Align(child: ElevatedButton(onPressed: () { Get.to(RouteLocatorScreen()); }, child: Text("Find route"),),)
                                                                     ])))
                                                       ])),
-                                                  CustomImageView(
-                                                      svgPath: ImageConstant
-                                                          .imgVolumeBlueGray300,
-                                                      height: getSize(20),
-                                                      width: getSize(20),
-                                                      margin: getMargin(
-                                                          left: 8,
-                                                          top: 38,
-                                                          bottom: 38))
-                                                ]))
+                                                ]
+                                            ))
                                       ]))),
                           Spacer(),
                           Card(

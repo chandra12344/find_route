@@ -45,11 +45,7 @@ class MapScreen extends StatefulWidget {
 class _MapScreenState extends State<MapScreen> {
   late GoogleMapController mapController;
 
-  final LatLng _center = const LatLng(37.7749, -122.4194); // San Francisco coordinates
-
-  void _onMapCreated(GoogleMapController controller) {
-    mapController = controller;
-  }
+  final LatLng _initialPosition = const LatLng(37.7749, -122.4194);
 
   @override
   Widget build(BuildContext context) {
@@ -58,11 +54,22 @@ class _MapScreenState extends State<MapScreen> {
         title: Text('Google Maps Example'),
       ),
       body: GoogleMap(
-        onMapCreated: _onMapCreated,
+        onMapCreated: (controller) {
+          setState(() {
+            mapController = controller;
+          });
+        },
         initialCameraPosition: CameraPosition(
-          target: _center,
-          zoom: 11.0,
+          target: _initialPosition,
+          zoom: 12.0,
         ),
+        markers: {
+          Marker(
+            markerId: MarkerId("1"),
+            position: _initialPosition,
+            infoWindow: InfoWindow(title: "Marker Title", snippet: "Marker Snippet"),
+          ),
+        },
       ),
     );
   }
