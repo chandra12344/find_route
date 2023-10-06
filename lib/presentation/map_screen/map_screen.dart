@@ -90,13 +90,36 @@ class MapScreen extends GetWidget<MapController> {
                                                                             .start,
                                                                     children: [
                                                                       TextFieldSearch(
-                                                                          label: "msg_choose_start_location".tr,
+                                                                          decoration:  InputDecoration(
+                                                                            contentPadding:
+                                                                            EdgeInsets.symmetric(vertical: 4.0, horizontal: 10.0),
+                                                                            focusedBorder: OutlineInputBorder(
+                                                                              borderSide: BorderSide(color: Colors.black12, width: 2.0),
+                                                                            ),
+                                                                            enabledBorder: OutlineInputBorder(
+                                                                              borderSide: BorderSide(color: Colors.black12, width: 2.0),
+                                                                            ),
+                                                                            hintText: "msg_choose_start_location".tr,
+                                                                          ),
+                                                                          label:'',
                                                                           controller: controller.sourceController,
                                                                           future: () {
                                                                             return fetchSimpleData();
                                                                           }),
+                                                                      SizedBox(height: 5.0,),
                                                                       TextFieldSearch(
-                                                                          label: "msg_choose_destination".tr,
+                                                                          decoration:  InputDecoration(
+                                                                            contentPadding:
+                                                                            EdgeInsets.symmetric(vertical: 4.0, horizontal: 10.0),
+                                                                            focusedBorder: OutlineInputBorder(
+                                                                              borderSide: BorderSide(color: Colors.black12, width: 2.0),
+                                                                            ),
+                                                                            enabledBorder: OutlineInputBorder(
+                                                                              borderSide: BorderSide(color: Colors.black12, width: 2.0),
+                                                                            ),
+                                                                            hintText: "msg_choose_destination".tr,
+                                                                          ),
+                                                                          label: '',
                                                                           controller: controller.destinationController,
                                                                           future: () {
                                                                             return fetchSimpleData();
@@ -128,7 +151,7 @@ class MapScreen extends GetWidget<MapController> {
                                                                               .GilroyMedium16Bluegray300,
                                                                           textInputAction:
                                                                               TextInputAction.done),*/
-                                                                      Align(child: ElevatedButton(onPressed: () { Get.to(RouteLocatorScreen()); }, child: Text("Find route"),),)
+                                                                      Align(child: ElevatedButton(onPressed: () { controller.getLatLog(); }, child: Text("Find route"),),)
                                                                     ])))
                                                       ])),
                                                 ]
