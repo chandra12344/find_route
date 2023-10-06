@@ -6,6 +6,7 @@ final Map<String, String> enUs = {
   "lbl_select": "Select",
   "lbl_store_locator": "Find Best Route",
   "msg_choose_start_location": "Choose start location",
+  "msg_choose_destination": "Choose End location",
   "lbl_map": "Map",
   "msg_view_location_on": "View Location on Map",
   "msg_proceed_to_checkout": "Proceed to Checkout",

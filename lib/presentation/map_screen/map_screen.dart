@@ -1,3 +1,5 @@
+import 'package:textfield_search/textfield_search.dart';
+
 import '../store_locator_screen/route_locator_screen.dart';
 import 'controller/map_controller.dart';
 import 'package:chandraprakash_s_application1/core/app_export.dart';
@@ -8,8 +10,14 @@ import 'package:chandraprakash_s_application1/widgets/custom_text_form_field.dar
 import 'package:flutter/material.dart';
 
 class MapScreen extends GetWidget<MapController> {
+
   @override
   Widget build(BuildContext context) {
+    // controller.getData();
+    Future<List> fetchSimpleData() async {
+      await Future.delayed(Duration(milliseconds: 2000));
+      return controller.routeList;
+    }
     return SafeArea(
         child: Scaffold(
             extendBody: true,
@@ -81,17 +89,29 @@ class MapScreen extends GetWidget<MapController> {
                                                                         MainAxisAlignment
                                                                             .start,
                                                                     children: [
-                                                                      CustomTextFormField(
-                                                                          focusNode:
-                                                                              FocusNode(),
-                                                                          controller: controller
-                                                                              .inputFieldController,
-                                                                          hintText: "msg_choose_start_location"
-                                                                              .tr,
-                                                                          variant: TextFormFieldVariant
-                                                                              .OutlineBluegray10001,
-                                                                          fontStyle:
-                                                                              TextFormFieldFontStyle.GilroyMedium16Bluegray300),
+                                                                      TextFieldSearch(
+                                                                          label: "msg_choose_start_location".tr,
+                                                                          controller: controller.sourceController,
+                                                                          future: () {
+                                                                            return fetchSimpleData();
+                                                                          }),
+                                                                      TextFieldSearch(
+                                                                          label: "msg_choose_destination".tr,
+                                                                          controller: controller.destinationController,
+                                                                          future: () {
+                                                                            return fetchSimpleData();
+                                                                          }),
+                                                                  /*    // CustomTextFormField(
+                                                                      //     focusNode:
+                                                                      //         FocusNode(),
+                                                                      //     controller: controller
+                                                                      //         .inputFieldController,
+                                                                      //     hintText: "msg_choose_start_location"
+                                                                      //         .tr,
+                                                                      //     variant: TextFormFieldVariant
+                                                                      //         .OutlineBluegray10001,
+                                                                      //     fontStyle:
+                                                                      //         TextFormFieldFontStyle.GilroyMedium16Bluegray300),
                                                                       CustomTextFormField(
                                                                           focusNode:
                                                                               FocusNode(),
@@ -107,7 +127,7 @@ class MapScreen extends GetWidget<MapController> {
                                                                           fontStyle: TextFormFieldFontStyle
                                                                               .GilroyMedium16Bluegray300,
                                                                           textInputAction:
-                                                                              TextInputAction.done),
+                                                                              TextInputAction.done),*/
                                                                       Align(child: ElevatedButton(onPressed: () { Get.to(RouteLocatorScreen()); }, child: Text("Find route"),),)
                                                                     ])))
                                                       ])),
