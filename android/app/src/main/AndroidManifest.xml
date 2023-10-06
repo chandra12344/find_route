@@ -6,6 +6,9 @@
     <application
         android:label="Green Route"
         android:icon="@mipmap/launcher_icon">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDsiLNlpQMWddh_uvY4Fvm1QE7m_FM1DcA" />
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

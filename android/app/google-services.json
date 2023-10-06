@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "512715824144",
+    "project_id": "greenroute-6cb8b",
+    "storage_bucket": "greenroute-6cb8b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512715824144:android:272d981699c84b14cc3e95",
+        "android_client_info": {
+          "package_name": "com.chandraprakashsapplication.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD39jAgBOJIsSG_-QiblYzYQxVabHvdDEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

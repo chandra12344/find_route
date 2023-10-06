@@ -39,6 +39,7 @@ MyToast.toast("Please start location");
     var sourceLog=await Constants.longitudeHashmap[sourceController.text];
     var destiLat=await Constants.latitudeHashmap[destinationController.text];
     var destiLog=await Constants.longitudeHashmap[destinationController.text];
+    debugPrint("$sourceLog  :   $sourceLat   : $destiLog    :  $destiLat");
     Get.to(RouteLocatorScreen());
   }
 }

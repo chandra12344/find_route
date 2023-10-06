@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       translations: AppLocalization(),
       locale: Get.deviceLocale,
       fallbackLocale: const Locale('en', 'US'),
-      title: 'chandraprakash_s_application1',
+      title: 'Green Route',
       initialBinding: InitialBindings(),
       initialRoute: AppRoutes.mapScreen,
       getPages: AppRoutes.pages,
@@ -74,3 +74,4 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 }
+
