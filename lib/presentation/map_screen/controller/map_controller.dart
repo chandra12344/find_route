@@ -120,7 +120,5 @@ class MapController extends GetxController {
   @override
   void onClose() {
     super.onClose();
-    inputFieldController.dispose();
-    inputFieldOneController.dispose();
   }
 }

@@ -130,7 +130,6 @@ class _DashboardScreenState extends State<DashboardScreen> {
   }
 
   bool compareTime(DateTime fromDate, DateTime toDate) {
-    // DateTime y = fromDate.add(Duration(minutes: 15));
     if (fromDate.compareTo(toDate) < 0) {
       return true;
     } else {
@@ -142,12 +141,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
   void initState() {
     mapController.getData();
     super.initState();
-    mapController.stationController.addListener(_printLatestValue);
   }
 
-  _printLatestValue() {
-    print("text field: ${mapController.stationController.text}");
-  }
 
   @override
   void dispose() {
