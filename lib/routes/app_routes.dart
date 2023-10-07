@@ -6,6 +6,7 @@ import 'package:chandraprakash_s_application1/presentation/store_locator_screen/
 import 'package:chandraprakash_s_application1/presentation/store_locator_screen/binding/store_locator_binding.dart';
 import 'package:get/get.dart';
 import '../google_map.dart';
+import '../presentation/dashboard_screen.dart';
 import '../presentation/map_screen/binding/map_binding.dart';
 
 class AppRoutes {
@@ -14,6 +15,7 @@ class AppRoutes {
   static const String routeLocatorScreen = '/route_locator_screen';
   static const String chatbotScreen = '/chatbot_screen';
   static const String googlemap = '/googlemap_screen';
+  static const String dashboard = '/dashboard_screen';
   static List<GetPage> pages = [
     GetPage(
       name: captchaScreen,
@@ -23,12 +25,16 @@ class AppRoutes {
       ],
     ),
     GetPage(
+      name: dashboard,
+      page: () => DashboardScreen(),
+    ),
+    GetPage(
       name: googlemap,
       page: () => MapSample(),
     ),
     GetPage(
       name: mapScreen,
-      page: () => MapScreen(),
+      page: () => MainMapScreen(),
       bindings: [
         MapBinding(),
       ],

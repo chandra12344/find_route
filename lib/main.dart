@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       fallbackLocale: const Locale('en', 'US'),
       title: 'Green Route',
       initialBinding: InitialBindings(),
-      initialRoute: AppRoutes.mapScreen,
+      initialRoute: AppRoutes.dashboard,
       getPages: AppRoutes.pages,
     );
   }

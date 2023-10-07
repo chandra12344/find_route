@@ -1,3 +1,4 @@
+import 'package:chandraprakash_s_application1/presentation/SettingsScreen.dart';
 import 'package:textfield_search/textfield_search.dart';
 
 import '../store_locator_screen/route_locator_screen.dart';
@@ -9,7 +10,7 @@ import 'package:chandraprakash_s_application1/widgets/app_bar/custom_app_bar.dar
 import 'package:chandraprakash_s_application1/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 
-class MapScreen extends GetWidget<MapController> {
+class MainMapScreen extends GetWidget<MapController> {
 
   @override
   Widget build(BuildContext context) {
@@ -55,20 +56,18 @@ class MapScreen extends GetWidget<MapController> {
                                         CustomAppBar(
                                             height: getVerticalSize(29),
                                             leadingWidth: 40,
-                                            leading: AppbarImage(
-                                                height: getSize(24),
-                                                width: getSize(24),
-                                                svgPath:
-                                                    ImageConstant.imgArrowleft,
-                                                margin: getMargin(
-                                                    left: 16, bottom: 4),
+                                            leading: AppbarImage(height: getSize(24), width: getSize(24), svgPath: ImageConstant.imgArrowleft,margin: getMargin(left: 16, bottom: 4),
                                                 onTap: () {
                                                   onTapArrowleft1();
                                                 }),
                                             centerTitle: true,
-                                            title: AppbarSubtitle(
-                                                text:
-                                                    "msg_view_location_on".tr)),
+                                            title: Row(
+                                              children: [
+                                                AppbarSubtitle(text: "msg_view_location_on".tr),
+                                                Spacer(),
+                                                IconButton(onPressed: (){Get.to(SettingsScreen());}, icon: Icon(Icons.settings,color: Colors.black,))
+                                              ],
+                                            )),
                                         Padding(
                                             padding: getPadding(left: 16, top: 32, right: 16, bottom: 16),
                                             child: Row(
