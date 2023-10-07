@@ -114,7 +114,6 @@ class MapController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    getData();
   }
 
   @override
