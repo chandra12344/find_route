@@ -448,12 +448,176 @@ SfRadialGauge buildSfRadialGauge(BuildContext context, double score) {
       ]);
 }
 
-class CustomDailyPage extends StatelessWidget {
+class CustomDailyPage extends StatefulWidget {
   Data data;
    CustomDailyPage({
     super.key,
     required this.data
   });
+
+  @override
+  State<CustomDailyPage> createState() => _CustomDailyPageState();
+}
+
+class _CustomDailyPageState extends State<CustomDailyPage> {
+  showInformation(){
+    return showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return StatefulBuilder(
+              builder: (context,setState) {
+                return AlertDialog(
+                  // backgroundColor: Colors.lightGreenAccent,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30)
+                  ),
+                  title: Text("Major Air Pollutants in New Delhi's Routes  ->",
+                      style: GoogleFonts.kalam(
+                        textStyle: TextStyle(
+                            color: Theme.of(context).brightness == Brightness.light ? Colors.green: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      )),
+                  content: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Text("65",style: GoogleFonts.kalam(
+                            textStyle: TextStyle(
+                                color: Theme.of(context).brightness == Brightness.light ? Colors.black: Colors.white,
+                                fontSize: 26,
+                                fontWeight: FontWeight.bold),
+                          )),
+                          Text("(PM10)",style: GoogleFonts.kalam(
+                            textStyle: TextStyle(
+                                color: Theme.of(context).brightness == Brightness.light ? Colors.black: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold),
+                          )),
+                        ],
+                      ),
+                      SizedBox(height: 5,),
+                      Stack(
+                        children: [
+                          Container(
+                            height:5 ,
+                            width: 200,
+                            color: Colors.orange.shade200,
+                          ),
+                          Container(
+                            height: 5,
+                            width: 100,
+                            color: Colors.orange,
+                          )
+                        ],
+                      ),
+                      SizedBox(height: 10.0,),
+                      Row(
+                        children: [
+                          Text("2",style: GoogleFonts.kalam(
+                            textStyle: TextStyle(
+                                color: Theme.of(context).brightness == Brightness.light ? Colors.black: Colors.white,
+                                fontSize: 26,
+                                fontWeight: FontWeight.bold),
+                          )),
+                          Text("(OS2)",style: GoogleFonts.kalam(
+                            textStyle: TextStyle(
+                                color: Theme.of(context).brightness == Brightness.light ? Colors.black: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold),
+                          )),
+                        ],
+                      ),
+                      SizedBox(height: 5,),
+                      Stack(
+                        children: [
+                          Container(
+                            height:5 ,
+                            width: 200,
+                            color: Colors.green.shade200,
+                          ),
+                          Container(
+                            height: 5,
+                            width: 60,
+                            color: Colors.green,
+                          )
+                        ],
+                      ),
+                      SizedBox(height: 10.0,),
+                      Row(
+                        children: [
+                          Text("365",style: GoogleFonts.kalam(
+                            textStyle: TextStyle(
+                                color: Theme.of(context).brightness == Brightness.light ? Colors.black: Colors.white,
+                                fontSize: 26,
+                                fontWeight: FontWeight.bold),
+                          )),
+                          Text("(CO)",style: GoogleFonts.kalam(
+                            textStyle: TextStyle(
+                                color: Theme.of(context).brightness == Brightness.light ? Colors.black: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold),
+                          )),
+                        ],
+                      ),
+                      SizedBox(height: 5,),
+                      Stack(
+                        children: [
+                          Container(
+                            height:5 ,
+                            width: 200,
+                            color: Colors.red.shade200,
+                          ),
+                          Container(
+                            height: 5,
+                            width: 140,
+                            color: Colors.red,
+                          )
+                        ],
+                      ),
+                      SizedBox(height: 10.0,),
+                      Row(
+                        children: [
+                          Text("10",style: GoogleFonts.kalam(
+                            textStyle: TextStyle(
+                                color: Theme.of(context).brightness == Brightness.light ? Colors.black: Colors.white,
+                                fontSize: 26,
+                                fontWeight: FontWeight.bold),
+                          )),
+                          Text("(Ozone)",style: GoogleFonts.kalam(
+                            textStyle: TextStyle(
+                                color: Theme.of(context).brightness == Brightness.light ? Colors.black: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold),
+                          )),
+                        ],
+                      ),
+                      SizedBox(height: 5,),
+                      Stack(
+                        children: [
+                          Container(
+                            height:5 ,
+                            width: 200,
+                            color: Colors.green.shade200,
+                          ),
+                          Container(
+                            height: 5,
+                            width: 140,
+                            color: Colors.green,
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                );
+              }
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -462,7 +626,7 @@ class CustomDailyPage extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       margin: const EdgeInsets.only(top: 8.0),
       decoration: LeaveApproveCardDecoration.leaveDecoration(
-          5, 5,int.parse("${data.pm2cnc}"), Colors.white, Colors.white),
+          5, 5,int.parse("${widget.data.pm2cnc}"), Colors.white, Colors.white),
       child: Column(
         children: [
            Expanded(
@@ -474,7 +638,7 @@ class CustomDailyPage extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontSize: 16.0),
                 ),
                 Text(
-                  "${data.dtTime}",
+                  "${widget.data.dtTime}",
                   style: TextStyle(color: Colors.white, fontSize: 14.0),
                 ),
               ],
@@ -489,7 +653,7 @@ class CustomDailyPage extends StatelessWidget {
                   "Temperature : ",
                   style: TextStyle(color: Colors.white, fontSize: 16.0),
                 ),
-                Text("${data.temp}°C°F",
+                Text("${widget.data.temp}°C°F",
                     style: TextStyle(color: Colors.white, fontSize: 14.0))
               ],
             ),
@@ -504,7 +668,7 @@ class CustomDailyPage extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontSize: 18.0),
                 ),
                  Text(
-                  "${data.pm2cnc}",
+                  "${widget.data.pm2cnc}",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 18.0,
@@ -512,7 +676,9 @@ class CustomDailyPage extends StatelessWidget {
                 ),
                 const Spacer(),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showInformation();
+                  },
                   style: ElevatedButton.styleFrom(
                       primary: Colors.green,
                       textStyle: const TextStyle(
@@ -537,7 +703,7 @@ class CustomDailyPage extends StatelessWidget {
                   style: TextStyle(color: Colors.white, fontSize: 16.0),
                 ),
                 Text(
-                  "${Constants.stationnameHashmap[data.deviceid]}",
+                  "${Constants.stationnameHashmap[widget.data.deviceid]}",
                   style: TextStyle(color: Colors.white, fontSize: 14.0),
                 ),
               ],
